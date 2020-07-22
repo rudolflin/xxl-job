@@ -81,6 +81,7 @@ public abstract class ShardingXxlJobDefine {
 
     @XxlJob(JOBNAME)
     public ReturnT<String> runTask(String param){
+        System.out.println("common-sharding-任务开始执行");
         ShardingUtil.ShardingVO shardingVo = ShardingUtil.getShardingVo();
         List<Long> allTaskIds=Collections.emptyList();
         if (shardingVo.getIndex()==0){
